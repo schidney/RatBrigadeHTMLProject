@@ -7,8 +7,8 @@
 			html, body {
 				padding: 0px;
 				margin: 0px;
-				background-color: rgb(50, 50, 50);
 				color: rgb(255, 255, 255);
+				background-image: url("./resources/ratWallpaper.jpg");
 			}
 
 			p {
@@ -22,19 +22,19 @@
 			}
 
 			.button {
+				padding-left: 10px;
+				padding-right: 10px;
 				height: 100%;
-				width: 100%;
-				background-color: rgb(50, 50, 150);
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: gray;
 			}
 
 			.button:hover {
-				background-color: rgb(60, 60, 160);
+				background-color: rgba(255, 255, 255, 0.1);
 			}
 
 			.header {
-				width: 100%;
 				height: 60px;
-				background-color: rgb(75, 75, 75);
 				display: flex;
 				flex-direction: row;
 				font-weight: bold;
@@ -43,9 +43,9 @@
 			}
 
 			.logoWrapper {
-				width: 100%;
+				display: flex;
+				flex: 2 0 auto;
 				height: 100%;
-				background-color: rgb(0, 200, 0);
 			}
 
 			.frontBar {
@@ -61,26 +61,44 @@
 			.whiteHR {
 				margin: 0;
 				padding: 0;
+				width: 100%;
+				height: 0;
+				border: 1px solid white;
+			}
+
+			.headerFlexSpacer {
+				display: flex;
+				flex: 1 0 auto;
+				width: 20%;
+				flex-basis: auto;
+				height: 100%;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="frontBar">
 			<header class="header">
-				<div class="logoWrapper">
-					<p class="centerText">website logo</p>
+				<div class="headerFlexSpacer" style="width: 5%;"></div>
+				<div class="logoWrapper" style="width: 15%; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: gray;">
+					<p class="centerText" style="width: 100%;">website logo</p>
 				</div>
+				<div class="headerFlexSpacer" style="width: 35%;"></div>
 				<a class="button centerText" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 					About
 				</a>
+				<div class="headerFlexSpacer" style="width: 20px;"></div>
 				<div class="button centerText">
 					Products
 				</div>
+				<div class="headerFlexSpacer" style="width: 20px;"></div>
 				<div class="button centerText">
 					Cart
 				</div>
+				<div class="headerFlexSpacer" style="width: 5%"></div>
 			</header>
-			<hr class="whiteHR">
+			<div class="whiteHR"></div>
+			<div style="width: 100%; height: 500px;"></div>
+			<div style="width: 100%; height: 500px; background-color: white;"></div>
 		</div>
 	</body>
 </html>
