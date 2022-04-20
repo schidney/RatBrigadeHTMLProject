@@ -46,6 +46,46 @@ p {
   background-color: brown;
 }
 
+.backdrop {
+  height: 350px;
+  background-color: aqua;
+  width: 100%;
+}
+
+.preview {
+  display: flex;
+  height: 150px;
+  flex-direction: row;
+  font-weight: bold;
+  font-family: sans-serif;
+  justify-content: center;
+  background-color: blue;
+}
+
+.prevItem {
+  position: relative;
+  top: -175px;
+  height: 250px;
+  width: 200px;
+  margin: 50px;
+  background-color: darkcyan;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.prevItem img {
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.shopItem {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
 .centerText {
   text-align: center;
   line-height: 60px;
