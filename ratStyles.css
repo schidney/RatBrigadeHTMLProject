@@ -10,7 +10,8 @@ body {
 p,
 a,
 h4,
-h3, h2 {
+h3,
+h2 {
   margin: 0px;
   padding: 0px;
 }
@@ -45,13 +46,13 @@ a:active {
 }
 
 .logoWrapper {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 200, 0);
-  }
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 200, 0);
+}
 
 .logoWrapper:hover {
-    background-color: rgb(20, 220, 20);
+  background-color: rgb(20, 220, 20);
 }
 
 .frontBar {
@@ -71,8 +72,6 @@ a:active {
   display: flex;
   height: 150px;
   flex-direction: row;
-  font-weight: bold;
-  font-family: sans-serif;
   justify-content: center;
 }
 
@@ -94,10 +93,8 @@ a:active {
   margin-top: 5px;
 }
 
-.shopItem {
+.prevItem p {
   position: relative;
-  margin: 0px;
-  padding: 0px;
 }
 
 .centerText {
@@ -106,14 +103,14 @@ a:active {
 }
 
 .shopItem {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .shopDescription {
-    margin: 15px;
-    display: flex;
-    flex-direction: row;
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 .shopTxt {
@@ -123,8 +120,8 @@ a:active {
 }
 
 .ratImage {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
 }
 
 .commentSection {
@@ -148,4 +145,14 @@ a:active {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+.aboutSection {
+  padding: 20px;
+}
+
+.aboutSection p {
+  padding: auto;
+  margin: 10px;
+  tab-size: 8;
 }
