@@ -5,7 +5,7 @@ body {
   background-color: rgb(189, 170, 172);
   background-image: url("images\\homeImages\\tileBackground.jpg");
   background-repeat: repeat;
-  font-family: "Varela Round",arial,sans-serif;
+  font-family: "Varela Round", arial, sans-serif;
   color: rgb(246, 244, 242);
   height: 100%;
 }
@@ -27,7 +27,7 @@ a:active {
   color: inherit;
 }
 
-.title {
+.frontTitle {
   text-align: center;
 }
 
@@ -88,10 +88,10 @@ a:active {
   );
 }
 
-#greetings{
+#greetings {
   margin: auto;
   text-align: center;
-  top:-300%;
+  top: -300%;
 }
 
 .preview {
@@ -197,4 +197,34 @@ a:active {
   padding: auto;
   margin: 10px;
   tab-size: 8;
+}
+
+.Heading {
+  background-color: rgb(246, 244, 242);
+  color: rgb(189, 170, 172);
+  width: 130px;
+  margin: 20px 0 20px 0;
+  font-size: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+  background-color: rgb(246, 244, 242);
+  color: rgb(189, 170, 172);
+  margin-top: 5px;
+  line-height: 10px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.forms {
+  background-color: rgb(189, 170, 172);
+  color: rgb(46, 28, 28);
+  font-size: 24px;
+  font-weight: 600px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 400px;
+  text-align: left;
+  margin-left: 210px;
+  margin-right: 210px;
 }
