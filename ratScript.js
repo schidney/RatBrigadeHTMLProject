@@ -1,15 +1,21 @@
 var ratCart = new Array();
+loadRatCart();
 
 function loadRatCart()
 {
 	ratCart = JSON.parse(window.localStorage.getItem("ratCart"));
+
+	if(ratCart == null)
+	{
+		ratCart = new Array();
+	}
 }
 
 function addRatToCart(ratName, ratPrice)
 {
 	var noRepeat = true;
 
-	ratCart.forEach((rat, index) => {
+	ratCart.forEach(rat => {
 		if(rat.name == ratName)
 		{
 			noRepeat = false;
