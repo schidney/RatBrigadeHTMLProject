@@ -50,7 +50,24 @@
         </div>
       </div>
       <h1 class="title">The Rat Nest</h1>
+      
+      <p id="greetings"></p>
       <!---->
     </div>
+    <script>
+      var myDate = new Date();
+      var hrs = myDate.getHours();
+
+      var greet;
+
+      if (hrs < 12) greet = "Good Morning";
+      else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+      else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+
+      document.getElementById("greetings").innerHTML =
+        greet + " and welcome to The Rat Nest.com!";
+
+      //end greeting text
+    </script>
   </body>
 </html>

@@ -88,6 +88,12 @@ a:active {
   );
 }
 
+#greetings{
+  margin: auto;
+  text-align: center;
+  top:-300%;
+}
+
 .preview {
   display: flex;
   height: 150px;
@@ -163,6 +169,7 @@ a:active {
   position: relative;
   left: 5%;
   margin: 10px;
+  max-width: 80%;
 }
 
 .comment {
