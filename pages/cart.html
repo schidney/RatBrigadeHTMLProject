@@ -10,8 +10,58 @@
     />
     <link rel="stylesheet" href="..\ratStyles.css" />
     <title>Rat Brigade Cart</title>
+    <script src="..\ratScript.js"></script>
+    <style>
+      .cartItemWrapper {
+        display: flex;
+        flex-direction: row;
+        background-color: tomato;
+        width: 95%;
+        height: 100px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .cartItemName {
+        display: flex;
+        width: 25%;
+        background-color: teal;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .cartItemPrice {
+        display: flex;
+        width: 50%;
+        background-color: violet;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cartItemRemoveButtonWrapper {
+        display: flex;
+        width: 25%;
+        background-color: yellow;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cartItemRemoveButton {
+        display: flex;
+        background-color: darkred;
+        color: white;
+        width: 80%;
+        height: 50%;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
-  <body>
+  <body onload="loadRatCart();populateCart();">
     <div class="frontBar">
       <header class="header">
         <a class="button" href="..\index.html">
@@ -30,7 +80,9 @@
         </a>
       </header>
       <!--Backdrop Image-->
-      <div class="aboutSection">TODO: Write Cart Code</div>
+      <div name="ratCart">
+
+      </div>
       <!---->
     </div>
   </body>

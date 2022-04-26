@@ -1,9 +1,42 @@
 var ratCart = new Array();
 
+function loadRatCart()
+{
+	ratCart = JSON.parse(window.localStorage.getItem("ratCart"));
+}
+
 function addRatToCart(ratName, ratPrice)
 {
-	ratCart.push({name=ratName, price=ratPrice})
+	var noRepeat = true;
+
+	ratCart.forEach((rat, index) => {
+		if(rat.name == ratName)
+		{
+			noRepeat = false;
+		}
+	});
+
+	if(noRepeat)
+	{
+		ratCart.push({name: ratName, price: ratPrice})
+		localStoreRatCart();
+	}
+}
+
+function removeCartItem(ratName)
+{
+	ratCart.forEach((rat, index) => {
+		if(rat.name == ratName)
+		{
+			ratCart.splice(index, 1);
+		}
+	});
+
+	document.getElementsByName("ratCart")[0].innerHTML = "";
+
 	localStoreRatCart();
+	loadRatCart();
+	populateCart();
 }
 
 function localStoreRatCart()
@@ -13,9 +46,32 @@ function localStoreRatCart()
 
 function populateCart()
 {
-	ratCart = JSON.parse(window.localStorage.getItem("ratCart"));
-
 	ratCart.forEach(rat => {
-		console.log("Rat Name: " + rat.name + " | Rat Price: " + rat.price);
+		var divWrapper = document.createElement("div");
+		divWrapper.className = "cartItemWrapper";
+
+		var itemName = document.createElement("div");
+		itemName.className = "cartItemName";
+		itemName.innerHTML = rat.name;
+
+		var itemPrice = document.createElement("div");
+		itemPrice.className = "cartItemPrice";
+		itemPrice.innerHTML = "$" + rat.price;
+
+		var removeButtonWrapper = document.createElement("div");
+		removeButtonWrapper.className = "cartItemRemoveButtonWrapper";
+
+		var removeButton = document.createElement("button");
+		removeButton.className = "cartItemRemoveButton";
+		removeButton.setAttribute("onClick", 'removeCartItem("' + rat.name + '")');
+		removeButton.innerHTML = "Remove from Cart"
+
+		divWrapper.appendChild(itemName);
+		divWrapper.appendChild(itemPrice);
+		divWrapper.appendChild(removeButtonWrapper);
+
+		removeButtonWrapper.appendChild(removeButton);
+
+		document.getElementsByName("ratCart")[0].appendChild(divWrapper);
 	});
 }
